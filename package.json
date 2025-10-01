@@ -1,0 +1,47 @@
+{
+  "name": "scryfall-mcp-server",
+  "version": "2.0.0",
+  "description": "A Model Context Protocol (MCP) server providing Magic: The Gathering data via Scryfall API. Supports stdio (Claude Desktop) and StreamableHTTP transports.",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+
+    "start": "node dist/index.js",
+    "start:http": "node dist/index-http.js",
+
+    "dev": "tsx src/index.ts",
+    "dev:http": "tsx src/index-http.ts",
+    "dev:test": "tsx src/index-dev.ts",
+
+    "test": "node tests/integration/basic-server.test.mjs && node tests/integration/enhanced-server.test.mjs && node tests/mcp/compliance.test.mjs && node tests/mcp/tool-call.test.mjs",
+    "test:inspector": "npx @modelcontextprotocol/inspector node dist/index.js",
+    "test:inspector:http": "npx @modelcontextprotocol/inspector http://localhost:8080/mcp"
+  },
+  "keywords": ["mcp", "model-context-protocol", "magic-the-gathering", "scryfall", "mtg", "claude", "stdio", "http", "streamable"],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/yourusername/scryfall-mcp-server#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/scryfall-mcp-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/scryfall-mcp-server/issues"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.18.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^4.18.2",
+    "helmet": "^7.1.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^24.5.1",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  }
+}

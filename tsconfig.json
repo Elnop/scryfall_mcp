@@ -1,0 +1,66 @@
+{
+  "compilerOptions": {
+    // Target moderne ES2022
+    "target": "ES2022",
+    "lib": ["ES2022"],
+
+    // ES Modules natifs modernes
+    "module": "ES2022",
+    "moduleResolution": "bundler",
+
+    // Chemins de compilation
+    "outDir": "./dist",
+    "rootDir": "./src",
+
+    // Type checking strict mais pratique
+    "strict": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "exactOptionalPropertyTypes": false,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+
+    // ES Modules interop
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+
+    // Performance moderne
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "allowJs": false,
+
+    // Source maps et déclarations
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "removeComments": false,
+
+    // Optimisations bundlers modernes
+    "isolatedModules": true,
+    "verbatimModuleSyntax": false,
+    "allowImportingTsExtensions": false,
+
+    // Développement moderne
+    "preserveWatchOutput": true,
+    "pretty": true,
+
+    // Support Top-level await
+    "moduleDetection": "force"
+  },
+
+  "include": [
+    "src/**/*"
+  ],
+
+  "exclude": [
+    "node_modules",
+    "dist",
+    "tests/**/*",
+    "**/*.test.ts",
+    "**/*.spec.ts"
+  ]
+}
